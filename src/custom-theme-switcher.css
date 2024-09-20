@@ -1,0 +1,163 @@
+/* General styling for app-nav */
+.app-nav {
+    margin-right: 120px !important;
+}
+
+.app-nav.no-badge {
+    margin-right: 85px !important;
+}
+
+/* Ensure cover section background is inherited */
+html.dark section.cover.show {
+    background: inherit !important;
+}
+
+/* Theme Switcher Styles */
+.docsify-theme-switcher {
+    position: absolute;
+    height: 31px;
+    top: 50px; /* Adjust based on navbar height */
+    right: 60px; /* Adjust to align properly */
+    text-align: right;
+    z-index: 11;
+    margin-top: 22px;
+}
+
+.docsify-theme-switcher:before {
+    width: 16px;
+    height: 24px;
+    margin-top: 0px;
+    border-left: 1px solid #e2e2e3;
+    content: "";
+    float: left;
+}
+
+.docsify-theme-switcher.no-nav::before {
+    content: none;
+}
+
+.docsify-theme-switcher.fixed {
+    position: fixed;
+}
+
+.docsify-theme-switcher.no-badge {
+    right: 25px;
+}
+
+/* Button styling with rounded gradient border */
+.docsify-theme-switcher>button {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    line-height: inherit;
+    color: #333;
+    border-radius: 50px; /* More rounded corners */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Adjust width for text and icon */
+    height: 35px;
+    border: 2px solid transparent; /* Transparent border */
+    background-color: #f5f5f5;
+    background-image: linear-gradient(#fff, #fff), /* Inner background */
+                      linear-gradient(45deg, #3b82f6, #ec4899); /* Gradient border */
+    background-origin: border-box;
+    background-clip: content-box, border-box; /* Ensures gradient only shows on border */
+    transition: background-color .3s, border-color .3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for 3D effect */
+}
+
+/* Hover effect with slightly darker background */
+.docsify-theme-switcher>button:hover {
+    background-color: #e0e0e0;
+    background-image: linear-gradient(#e0e0e0, #e0e0e0), /* Inner background on hover */
+                      linear-gradient(45deg, #3b82f6, #ec4899); /* Keep the gradient border */
+}
+
+/* Check indicator */
+.docsify-theme-switcher .check {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform .3s, background-color .3s;
+}
+
+/* Icon styling */
+.docsify-theme-switcher .icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon SVG styling */
+.docsify-theme-switcher svg {
+    width: 14px;
+    height: 14px;
+    fill: #666;
+    transition: fill .3s;
+}
+
+/* Dark mode adjustments */
+.docsify-theme-switcher.dark>button {
+    border-color: #555;
+    background-color: #333;
+}
+
+.docsify-theme-switcher.dark>button:hover {
+    background-color: #444;
+    border-color: #777;
+}
+
+.docsify-theme-switcher.dark .check {
+    transform: translate(20px);
+    background-color: #222;
+}
+
+.docsify-theme-switcher.dark svg {
+    fill: #fff;
+    transition: opacity .25s !important;
+}
+
+/* Add label to the button for theme switch */
+.docsify-theme-switcher>button:after {
+    content: "主题切换"; /* Add text inside the button */
+    font-size: 12px;
+    color: #333;
+    margin-left: 8px; /* Space between icon and text */
+}
+
+/* Navbar styling for alignment */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Dropdown positioning */
+.navbar .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure dropdown aligns with navbar items */
+.navbar .dropdown-button {
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
