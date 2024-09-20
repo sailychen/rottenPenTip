@@ -823,3 +823,144 @@ HTML简介
             </label>
          </fieldset>
          ```
+
+## 表单总结
+
+| 标签名    | 标签语义            | 常用属性                                                                                                       | 单/双标签 |
+| :-------- | :------------------ | :------------------------------------------------------------------------------------------------------------- | :--------: |
+| form      | 表单                | action属性:表单要提交的地址。<br>target属性:跳转的新地址的打开方式；值:_self、_blank<br>method属性:请求方式，可选值:get、post | 双        |
+| input     | 多种形式的表单控件  | type属性:指定表单控件的类型。可选值: text、password、radio、checkbox、hidden、submit、reset、button等。<br>name属性:指定数据名称<br>value属性:对于输入框:指定默认输入的值；对于单选和复选框:实际提交的数据；对于按钮:显按钮文字。<br>disabled属性:设置表单控件不可用。<br>maxlength属性:用于输入框，设置最大可输入长度。<br>checked属性:用于单选按钮和复选框，默认选中 | 单        |
+| textarea  | 文本域              | name属性:指定数据名称<br>rows属性:指定默认显示的行数，影响文本域的高度。<br>cols属性:指定默认显示的列数，影响文本域的宽度。<br>disabled属性:设置表单控件不可用。 | 双        |
+| select    | 下拉框              | name属性:指定数据名称<br>disabled属性:设置整个下拉框不可用。                                                     | 双        |
+| option    | 下拉框的选项        | disabled属性:设置拉下选项不可用。<br>value属性:该选项事件提交的数据(不指定value，会把标签中的内容作为提交数据)。<br>selected属性：默认选中。 | 双        |
+| button    | 按钮                | type属性:设置按钮的类型，值:submit (默认)、reset、button<br>disabled属性:设置按钮不可用。                        | 双        |
+| label     | 与表单控件做关联表  | for属性:值与要关联的表单控件的ID值相同。                                                                       | 双        |
+| fieldset  | 表单控件分组        |                                                                                                             | 双        |
+| legend    | 分组名称            |                                                                                                              |双        |
+
+
+## 框架标签
+
+| 标签名  | 功能和语义                  | 属性                                                                                     | 单/双标签 |
+| :------ | :-------------------------- | :--------------------------------------------------------------------------------------- | :--------: |
+| iframe  | 框架 (在网页中嵌入其他文件) | name: 框架名字，可以与 target 属性配合。<br>width: 框架的宽。<br>height: 框架的高度。<br>frameborder: 是否显示边框，值: 0 或者 1。 | 双        |
+
+> iframe标签的实际应用:
+      >
+      > 1. 在网页中嵌入广告。
+      >
+      > 2. 与超链接或表单的target配合，展示不同的内容。
+
+**例子：**
+```html
+<!--利用iframe嵌入一个普通网页 -->
+<!-<iframe src="https://www.toutiao.com" width="900" height="300" frameborder="1"></iframe>
+<!--利用iframe 嵌入一个广告网页 -->
+<iframe width="300" height="250" src="https://pos.baidu.com/xchm?conwid"> </iframe>
+<!--利用iframe嵌入其他内容-->
+<!--<iframe src="./resource/暴富.pdf" frameborder="0"></iframe>--> 
+<!--与超链接的target属性配合使用--> 
+<a href="https://www.toutiao.com"target="tt">点我看新闻</a> 
+<a href="https://www.taobao.com"target="tt">点我看淘宝</a><br>
+<iframe name="tt" frameborder="1" width="900" height="300"></iframe>
+<form action="https://so.toutiao.com/search" target="container"> 
+   <input type="text" name="keyword"> 
+   <input type="submit" value="搜索">
+</form>
+<iframe name="container" frameborder="O" width="900" height="300"></iframe> 
+```
+
+## HTML实体
+   > 在HTML中我们可以用一种特殊的形式的内容，来表示某个符号这种特殊形式的内容，就是HTML实体。比如小于号<用于定义HTML标签的开始。如果我们希望浏览器正确地显示这些字符，我们必须在HTML源码中插入字符实体。
+   >
+   > 字符实体由三部分组成:一个&和一个实体名称(或者一个#和一个实体编号)，最后加上一个分号；。
+
+**常见字符实体总结:**
+
+| 符号  | 描述            | 实体名称   | 实体编号 |
+| :---- | :-------------- | :--------- | :------- |
+| +     | 空格            | `&nbsp;`   | `&#160;` |
+| <     | 小于号          | `&lt;`     | `&#60;`  |
+| >     | 大于号          | `&gt;`     | `&#62;`  |
+| &     | 和号            | `&amp;`    | `&#38;`  |
+| "     | 引号            | `&quot;`   | `&#34;`  |
+| ´     | 反引号          | `&acute;`  | `&#180;` |
+| ¢     | 分(cent)        | `&cent;`   | `&#162;` |
+| £     | 镑(pound)       | `&pound;`  | `&#163;` |
+| ¥     | 元(yen)         | `&yen;`    | `&#165;` |
+| €     | 欧元(euro)      | `&euro;`   | `&#8364;`|
+| ©     | 版权(copyright) | `&copy;`   | `&#169;` |
+| ®     | 注册商标        | `&reg;`    | `&#174;` |
+| ™     | 商标            | `&trade;`  | `&#8482;`|
+| ×     | 乘号            | `&times;`  | `&#215;` |
+| ÷     | 除号            | `&divide;` | `&#247;` |
+
+详细参靠链接MND链接: [link](https://developer.mozilla.org/zh-CN/docs/Glossary/Entity).
+
+## HTML全局属性
+
+**常用的全局属性:**
+
+| 属性名 | 含义 |
+| :----- | :------------------ |
+| **id** | 给标签指定唯一标识，注意：`id` 是不能重复的。<br>**作用**：可以让 `label` 标签与表单控件相关联；也可以与 CSS、JavaScript 配合使用。<br>**注意**：不能在以下 HTML 元素中使用：`<head>`、`<html>`、`<meta>`、`<script>`、`<style>`、`<title>`。 |
+| **class** | 给标签指定类名，随后通过 CSS 就可以给标签设置样式。 |
+| **style** | 给标签设置 CSS 样式。 |
+| **dir** | 内容的方向，值：`ltr`（从左到右）、`rtl`（从右到左）。<br>**注意**：不能在以下 HTML 元素中使用：`<head>`、`<html>`、`<meta>`、`<script>`、`<style>`、`<title>`。 |
+| **title** | 给标签设置一个文字提示，一般在超链接和图片中使用较多。 |
+| **lang** | 给标签指语言，具体规范和可选值请参考【10.HTML 设置语言】。<br>**注意**：不能在以下 HTML 元素中使用：`<head>`、`<html>`、`<meta>`、`<script>`、`<style>`、`<title>`。 |
+
+详细参靠链接MND链接: [link](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/accesskey).
+
+## meta元信息
+   1. 配置字符编码
+   ```html
+   <meta charset="utf-8">
+   ```
+   2. 针对IE浏览器的兼容性配置。
+   ```html
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   ```
+   3. 针对移动端的配置(移动端课程中会详细讲解)
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+   4. 配置网页关键字
+   ```html
+   <meta name="keywords"content="8-12个以英文逗号隔开的单词/词语">
+   ```
+   5. 配置网页描述信息
+   ```html
+   <meta name="description"content="80字以内的一段话，与网站内容相关">
+   ```
+   6. 针对搜索引擎爬虫配置:
+   ```html
+   <meta name="robots" content="此处可选值见下表">
+   ```
+   | 值         | 描述                                                                 |
+   | :-------- | :------------------------------------------------------------------ |
+   | **index**      | 允许搜索爬虫索引此页面。                                           |
+   | **noindex**    | 要求搜索爬虫不索引此页面。                                         |
+   | **follow**     | 允许搜索爬虫跟随此页面上的链接。                                    |
+   | **nofollow**   | 要求搜索爬虫不跟随此页面上的链接。                                  |
+   | **all**        | 等价于 `index` 和 `follow`，允许索引和跟随链接。                   |
+   | **none**       | 等价于 `noindex` 和 `nofollow`，要求不索引页面且不跟随链接。        |
+   | **noarchive**  | 要求搜索引擎不缓存页面内容。                                        |
+   | **nocache**    | `noarchive` 的替代名称，要求不缓存页面内容。                        |
+   7. 配置网作者:
+   ```html
+   <meta name="author" content="tony">
+   ```
+   8. 配置网页生成工具
+   ```html
+   <meta name="generator" content="Visual Studio Code">
+   ```
+   9. 配置定义网页版权信息:
+   ```html
+   <meta name="copyright" content="2023-2027c版权所有">
+   ```
+   10. 配置网页自动刷新
+   ```html
+   <meta http-equiv="refresh" content="10:url=http:/www.baidu.com">
+   ```
+详细参靠链接MND链接: [link](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta).
