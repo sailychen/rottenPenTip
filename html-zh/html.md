@@ -535,6 +535,7 @@ HTML简介
       ```
       注意： li 标签最好写在 ul 或 ol 中，不要单独使用。
    10. 自定义列表
+
       > 概念：所谓自定义列表，就是一个包含术语名称以及术语描述的列表。
       >
       >  一个 dl 就是一个自定义列表，一个 dt 就是一个术语名称，一个 dd 就是术语描述（可以有多个）。
@@ -551,7 +552,7 @@ HTML简介
       </dl>
       ```
    11. 表格
-      1. 基本结构
+            1. 基本结构
          > 一个完整的表格由：表格标题、表格头部、表格主体、表格脚注，四部分组成。
          >
          **表格涉及到的标签：**
@@ -628,16 +629,16 @@ HTML简介
                </tfoot>
             </table>
          ```
-      2. 常用属性
-            | 标签名称 | 标签语义 | 常用属性 | 单/双标签 |
-            | :------: | :------: | :------------------------------------------------------------ | :-------: |
-            | table    | 表格      | width：设置表格宽度。<br>height：设置表格最小高度，表格最终高度可能比设置的值大。<br>border：设置表格边框宽度。<br>cellspacing：设置单元格之间的间距。 | 双        |
-            | thead    | 表格头部  | height：设置表格头部高度。<br>align：设置单元格的水平对齐方式，可选值如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;1. left：左对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;2. center：中间对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;3. right：右对齐<br>valign：设置单元格的垂直对齐方式，可选值如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;1. top：顶部对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;2. middle：中间对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;3. bottom：底部对齐 | 双        |
-            | tbody    | 表格主体  | 常用属性与 thead 相同。 | 双        |
-            | tr       | 行        | 常用属性与 thead 相同。 | 双        |
-            | tfoot    | 表格脚注  | 常用属性与 thead 相同。 | 双        |
-            | td       | 普通单元格 | width：设置单元格的宽度，同列所有单元格全都受影响。<br>height：设置单元格的高度，同行所有单元格全都受影响。<br>align：设置单元格的水平对齐方式。<br>valign：设置单元格的垂直对齐方式。<br>rowspan：指定要跨的行数。<br>colspan：指定要跨的列数。 | 双        |
-            | th       | 表头单元格 | 常用属性与 td 相同。 | 双        |
+            2. 常用属性
+         | 标签名称 | 标签语义 | 常用属性 | 单/双标签 |
+         | :------: | :------: | :------------------------------------------------------------ | :-------: |
+         | table    | 表格      | width：设置表格宽度。<br>height：设置表格最小高度，表格最终高度可能比设置的值大。<br>border：设置表格边框宽度。<br>cellspacing：设置单元格之间的间距。 | 双        |
+         | thead    | 表格头部  | height：设置表格头部高度。<br>align：设置单元格的水平对齐方式，可选值如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;1. left：左对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;2. center：中间对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;3. right：右对齐<br>valign：设置单元格的垂直对齐方式，可选值如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;1. top：顶部对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;2. middle：中间对齐<br>&nbsp;&nbsp;&nbsp;&nbsp;3. bottom：底部对齐 | 双        |
+         | tbody    | 表格主体  | 常用属性与 thead 相同。 | 双        |
+         | tr       | 行        | 常用属性与 thead 相同。 | 双        |
+         | tfoot    | 表格脚注  | 常用属性与 thead 相同。 | 双        |
+         | td       | 普通单元格 | width：设置单元格的宽度，同列所有单元格全都受影响。<br>height：设置单元格的高度，同行所有单元格全都受影响。<br>align：设置单元格的水平对齐方式。<br>valign：设置单元格的垂直对齐方式。<br>rowspan：指定要跨的行数。<br>colspan：指定要跨的列数。 | 双        |
+         | th       | 表头单元格 | 常用属性与 td 相同。 | 双        |
             >
             **注意点：**
             ```
@@ -646,11 +647,12 @@ HTML简介
             给某个 th 或 td 设置了宽度之后，他们所在的那一列的宽度就确定了。
             给某个 th 或 td 设置了高度之后，他们所在的那一行的高度就确定了。
             ```
-            >   
-      3. 跨行跨列
+            > 
+            3. 跨行跨列
             * rowspan ：指定要跨的行数。
             * colspan ：指定要跨的列数。
    12. 常用标签补充
+
       | 标签名 | 标签含义 | 单/双标签 |
       | :----: | :-------: | :-------: |
       |  br    | 换行      | 单        |
@@ -666,16 +668,16 @@ HTML简介
    13. 表单
 
        概念：一个包含交互的区域，用于收集用户提供的数据。
-      1. 基本结构
+            1. 基本结构
          简单梳理：
-         | 标签名  | 标签语义 | 常用属性 | 单/双标签 |
-         | :----:  | :-------: | :------: | :-------: |
-         |  form   | 表单      | action ：用于指定表单的提交地址（需要与后端人员沟通后确定）。<br>target ：用于控制表单提交后，如何打开页面，常用值如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;_self ：在本窗口打开。<br>&nbsp;&nbsp;&nbsp;&nbsp;_blank ：在新窗口打开。<br>method ：用于控制表单的提交方式，暂时只需了解，在后面 Ajax 的课程中，会详细讲解。 | 双        |
-         |  input  | 输入框    | type ：设置输入框的类型，目前用到的值是 text ，表示普通文本。<br>name ：用于指定提交数据的名字，（需要与后端人员沟通后确定）。 | 单        |
-         |  button | 按钮      | 本小节暂不涉及 | 双        |
+       | 标签名  | 标签语义 | 常用属性 | 单/双标签 |
+       | :----:  | :-------: | :------: | :-------: |
+       |  form   | 表单      | action ：用于指定表单的提交地址（需要与后端人员沟通后确定）。<br>target ：用于控制表单提交后，如何打开页面，常用值如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;_self ：在本窗口打开。<br>&nbsp;&nbsp;&nbsp;&nbsp;_blank ：在新窗口打开。<br>method ：用于控制表单的提交方式，暂时只需了解，在后面 Ajax 的课程中，会详细讲解。 | 双        |
+       |  input  | 输入框    | type ：设置输入框的类型，目前用到的值是 text ，表示普通文本。<br>name ：用于指定提交数据的名字，（需要与后端人员沟通后确定）。 | 单        |
+       |  button | 按钮      | 本小节暂不涉及 | 双        |
 
       在本小节，我们先记住表单的整体形式，稍后会对表单控件进行详细讲解。
-
+    
       **示例代码:**
       ```html
       <form action="https://www.baidu.com/s" target="_blank" method="get">
@@ -694,7 +696,7 @@ HTML简介
             name 属性：数据的名称。
             value 属性：输入框的默认输入值。
             maxlength 属性：输入框最大可输入长度。
-
+    
          - 密码输入框
          ```html
          <input type="password">
@@ -937,16 +939,16 @@ HTML简介
    ```html
    <meta name="robots" content="此处可选值见下表">
    ```
-   | 值         | 描述                                                                 |
-   | :-------- | :------------------------------------------------------------------ |
-   | **index**      | 允许搜索爬虫索引此页面。                                           |
-   | **noindex**    | 要求搜索爬虫不索引此页面。                                         |
-   | **follow**     | 允许搜索爬虫跟随此页面上的链接。                                    |
-   | **nofollow**   | 要求搜索爬虫不跟随此页面上的链接。                                  |
-   | **all**        | 等价于 `index` 和 `follow`，允许索引和跟随链接。                   |
-   | **none**       | 等价于 `noindex` 和 `nofollow`，要求不索引页面且不跟随链接。        |
-   | **noarchive**  | 要求搜索引擎不缓存页面内容。                                        |
-   | **nocache**    | `noarchive` 的替代名称，要求不缓存页面内容。                        |
+| 值         | 描述                                                                 |
+| :-------- | :------------------------------------------------------------------ |
+| **index**      | 允许搜索爬虫索引此页面。                                           |
+| **noindex**    | 要求搜索爬虫不索引此页面。                                         |
+| **follow**     | 允许搜索爬虫跟随此页面上的链接。                                    |
+| **nofollow**   | 要求搜索爬虫不跟随此页面上的链接。                                  |
+| **all**        | 等价于 `index` 和 `follow`，允许索引和跟随链接。                   |
+| **none**       | 等价于 `noindex` 和 `nofollow`，要求不索引页面且不跟随链接。        |
+| **noarchive**  | 要求搜索引擎不缓存页面内容。                                        |
+| **nocache**    | `noarchive` 的替代名称，要求不缓存页面内容。                        |
    7. 配置网作者:
    ```html
    <meta name="author" content="tony">
@@ -964,3 +966,484 @@ HTML简介
    <meta http-equiv="refresh" content="10:url=http:/www.baidu.com">
    ```
 详细参靠链接MND链接: [link](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta).
+
+
+
+## HTML5 新增
+
+### 新增语义化标签
+1. 新增布局标签
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>标签名</th>
+    <th>语义</th>
+    <th>单/双标签</th>
+  </tr>
+  <tr>
+    <td>header</td>
+    <td>整个页面，或部分区域的头部</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>footer</td>
+    <td>整个页面，或部分区域的底部</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>nav</td>
+    <td>导航</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>article</td>
+    <td>文章、帖子、杂志、新闻、博客、评论等</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>section</td>
+    <td>页面中的某段文字，或文章中的某段文字（通常包含标题）</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>aside</td>
+    <td>侧边栏</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>main</td>
+    <td>文档的主要内容（WHATWG 无语义，IE 不支持）</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>hgroup</td>
+    <td>包裹连续的标题，如文章主标题、副标题的组合（W3C 将其删除）</td>
+    <td>双</td>
+  </tr>
+</table>
+
+关于 article 和 section ：
+   1. artical 里面可以有多个 section 。
+   2. section 强调的是分段或分块，如果你想将一块内容分成几段的时候，可使用 section 元
+      素。
+   3. article 比 section 更强调独立性，一块内容如果比较独立、比较完整，应该使用
+      article 元素。
+
+2. 新增状态标签
+   2.1 meter 标签
+   语义：定义已知范围内的标量测量。也被称为 gauge （尺度），双标签，例如：电量、磁盘用量
+   等。
+   常用属性如下：
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>属性</th>
+      <th>值</th>
+      <th>描述</th>
+   </tr>
+   <tr>
+      <td>high</td>
+      <td>数值</td>
+      <td>规定高值</td>
+   </tr>
+   <tr>
+      <td>low</td>
+      <td>数值</td>
+      <td>规定低值</td>
+   </tr>
+   <tr>
+      <td>max</td>
+      <td>数值</td>
+      <td>规定最大值</td>
+   </tr>
+   <tr>
+      <td>min</td>
+      <td>数值</td>
+      <td>规定最小值</td>
+   </tr>
+   <tr>
+      <td>optimum</td>
+      <td>数值</td>
+      <td>规定最优值</td>
+   </tr>
+   <tr>
+      <td>value</td>
+      <td>数值</td>
+      <td>规定当前值</td>
+   </tr>
+   </table>
+   2.2 progress 标签
+   语义：显示某个任务完成的进度的指示器，一般用于表示进度条，双标签，例如：工作完成进度
+   等。
+   常用属性如下：
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>属性</th>
+      <th>值</th>
+      <th>描述</th>
+   </tr>
+   <tr>
+      <td>max</td>
+      <td>数值</td>
+      <td>规定目标值</td>
+   </tr>
+   <tr>
+      <td>value</td>
+      <td>数值</td>
+      <td>规定当前值</td>
+   </tr>
+   </table>
+
+3. 新增列表标签
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>标签名</th>
+    <th>语义</th>
+    <th>单/双标签</th>
+  </tr>
+  <tr>
+    <td>datalist</td>
+    <td>用于搜索框的关键字提示</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>details</td>
+    <td>用于展示问题和答案，或对专有名词进行解释</td>
+    <td>双</td>
+  </tr>
+  <tr>
+    <td>summary</td>
+    <td>写在 details 的里面，用于指定问题或专有名词</td>
+    <td>双</td>
+  </tr>
+</table>
+
+
+```html
+<datalist id="mydata">
+   <option value="周冬雨">周冬雨</option>
+   <option value="周杰伦">周杰伦</option>
+   <option value="温兆伦">温兆伦</option>
+   <option value="马冬梅">马冬梅</option>
+</datalist>
+
+<details>
+<summary>如何走上人生巅峰？</summary>
+<p>一步一步走呗</p>
+</details>
+```
+
+4. 新增文本标签
+   1. 文本注音
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>标签名</th>
+      <th>语义</th>
+      <th>单/双标签</th>
+   </tr>
+   <tr>
+      <td>ruby</td>
+      <td>包裹需要注音的文字</td>
+      <td>双</td>
+   </tr>
+   <tr>
+      <td>rt</td>
+      <td>写注音，rt 标签写在 ruby 的里面</td>
+      <td>双</td>
+   </tr>
+   </table>
+
+   ```html
+   <ruby>
+      <span>魑魅魍魉</span>
+      <rt>chī mèi wǎng liǎng </rt>
+   </ruby>
+   ```
+
+   2. 文本标记
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>标签名</th>
+      <th>语义</th>
+      <th>单/双标签</th>
+   </tr>
+   <tr>
+      <td>mark</td>
+      <td>标记</td>
+      <td>双</td>
+   </tr>
+   </table>
+
+### 新增表单功能
+
+   1. 表单控件新增属性
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>属性名</th>
+      <th>功能</th>
+   </tr>
+   <tr>
+      <td>placeholder</td>
+      <td>提示文字（不是默认值，<code>value</code> 是默认值），适用于文字输入类的表单控件。</td>
+   </tr>
+   <tr>
+      <td>required</td>
+      <td>表示该输入项必填，适用于除按钮外其他表单控件。</td>
+   </tr>
+   <tr>
+      <td>autofocus</td>
+      <td>自动获取焦点，适用于所有表单控件。</td>
+   </tr>
+   <tr>
+      <td>autocomplete</td>
+      <td>自动完成，可以设置为 <code>on</code> 或 <code>off</code>，适用于文字输入类的表单控件。注意：密码输入框、多行输入框不可用。</td>
+   </tr>
+   <tr>
+      <td>pattern</td>
+      <td>填写正则表达式，适用于文本输入类表单控件。注意：多行输入不可用，且空的输入框不会验证，往往与 <code>required</code> 配合。</td>
+   </tr>
+   </table>
+
+   2. input 新增属性值
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>属性名</th>
+      <th>功能</th>
+   </tr>
+   <tr>
+      <td>email</td>
+      <td>邮箱类型的输入框，表单提交时会验证格式，输入为空则不验证格式。</td>
+   </tr>
+   <tr>
+      <td>url</td>
+      <td>URL 类型的输入框，表单提交时会验证格式，输入为空则不验证格式。</td>
+   </tr>
+   <tr>
+      <td>number</td>
+      <td>数字类型的输入框，表单提交时会验证格式，输入为空则不验证格式。</td>
+   </tr>
+   <tr>
+      <td>search</td>
+      <td>搜索类型的输入框，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>tel</td>
+      <td>电话类型的输入框，表单提交时不会验证格式，在移动端使用时，会唤起数字键盘。</td>
+   </tr>
+   <tr>
+      <td>range</td>
+      <td>范围选择框，默认值为 50，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>color</td>
+      <td>颜色选择框，默认值为黑色，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>date</td>
+      <td>日期选择框，默认值为空，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>month</td>
+      <td>月份选择框，默认值为空，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>week</td>
+      <td>周选择框，默认值为空，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>time</td>
+      <td>时间选择框，默认值为空，表单提交时不会验证格式。</td>
+   </tr>
+   <tr>
+      <td>datetime-local</td>
+      <td>日期+时间选择框，默认值为空，表单提交时不会验证格式。</td>
+   </tr>
+   </table>
+
+   3. form 标签新增属性
+   <table border="1" cellpadding="5" cellspacing="0">
+   <tr>
+      <th>属性名</th>
+      <th>功能</th>
+   </tr>
+   <tr>
+      <td>novalidate</td>
+      <td>如果给 form 标签设置了该属性，表单提交的时候不再进行验证。</td>
+   </tr>
+   </table>
+
+
+### 新增多媒体标签
+
+1. 视频标签
+`<video>` 标签用来定义视频，它是双标签。
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>属性</th>
+    <th>值</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td>src</td>
+    <td>URL地址</td>
+    <td>视频地址</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>像素值</td>
+    <td>设置视频播放器的宽度</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>像素值</td>
+    <td>设置视频播放器的高度</td>
+  </tr>
+  <tr>
+    <td>controls</td>
+    <td>-</td>
+    <td>向用户显示视频控件（比如播放/暂停按钮）</td>
+  </tr>
+  <tr>
+    <td>muted</td>
+    <td>-</td>
+    <td>视频静音</td>
+  </tr>
+  <tr>
+    <td>autoplay</td>
+    <td>-</td>
+    <td>视频自动播放</td>
+  </tr>
+  <tr>
+    <td>loop</td>
+    <td>-</td>
+    <td>循环播放</td>
+  </tr>
+  <tr>
+    <td>poster</td>
+    <td>URL地址</td>
+    <td>视频封面</td>
+  </tr>
+  <tr>
+    <td>preload</td>
+    <td>auto / metadata / none</td>
+    <td>视频预加载。<br>
+    none: 不预加载视频。<br>
+    metadata: 仅预先获取视频的元数据（例如长度）。<br>
+    auto: 可以下载整个视频文件，即使用户不希望使用它。</td>
+  </tr>
+</table>
+
+2. 音频标签
+`<audio>` 标签用来定义音频，它是双标签。
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>属性</th>
+    <th>值</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td>src</td>
+    <td>URL地址</td>
+    <td>音频地址</td>
+  </tr>
+  <tr>
+    <td>controls</td>
+    <td>-</td>
+    <td>向用户显示音频控件（比如播放/暂停按钮）</td>
+  </tr>
+  <tr>
+    <td>autoplay</td>
+    <td>-</td>
+    <td>音频自动播放</td>
+  </tr>
+  <tr>
+    <td>muted</td>
+    <td>-</td>
+    <td>音频静音</td>
+  </tr>
+  <tr>
+    <td>loop</td>
+    <td>-</td>
+    <td>循环播放</td>
+  </tr>
+  <tr>
+    <td>preload</td>
+    <td>auto / metadata / none</td>
+    <td>音频预加载。如果使用 autoplay，则忽略该属性。<br>
+    none: 不预加载音频。<br>
+    metadata: 仅预先获取音频的元数据（例如长度）。<br>
+    auto: 可以下载整个音频文件，即使用户不希望使用它。</td>
+  </tr>
+</table>
+
+
+### 新增全局属性（了解）
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>属性名</th>
+    <th>功能</th>
+  </tr>
+  <tr>
+    <td>contenteditable</td>
+    <td>表示元素是否可被用户编辑，可选值如下：<br>
+        true：可编辑<br>
+        false：不可编辑
+    </td>
+  </tr>
+  <tr>
+    <td>draggable</td>
+    <td>表示元素可以被拖动，可选值如下：<br>
+        true：可拖动<br>
+        false：不可拖动<br>
+        hidden：隐藏元素
+    </td>
+  </tr>
+  <tr>
+    <td>spellcheck</td>
+    <td>规定是否对元素进行拼写和语法检查，可选值如下：<br>
+        true：检查<br>
+        false：不检查
+    </td>
+  </tr>
+  <tr>
+    <td>contextmenu</td>
+    <td>规定元素的上下文菜单，在用户鼠标右键点击元素时显示。</td>
+  </tr>
+  <tr>
+    <td>data-* </td>
+    <td>用于存储页面的私有定制数据。</td>
+  </tr>
+</table>
+
+
+### HTML5兼容性处理
+
+- 添加元信息，让浏览器处于最优渲染模式。
+```html
+<!--设置IE总是使用最新的文档模式进行渲染-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
+- 使用 html5shiv 让低版本浏览器认识 H5 的语义化标签。
+```html
+<!--[if lt ie 9]>
+<script src="../sources/js/html5shiv.js"></script>
+<![endif]
+```
+
+- 扩展
+```
+lt 小于
+lte 小于等于
+gt 大于
+gte 大于等于
+! 逻辑非
+```
+
+- 示例：
+```
+<!--[if IE 8]>仅IE8可见<![endif]-->
+<!--[if gt IE 8]>仅IE8以上可见<![endif]—>
+<!--[if lt IE 8]>仅IE8以下可见<![endif]—>
+<!--[if gte IE 8]>IE8及以上可见<![endif]—>
+<!--[if lte IE 8]>IE8及以下可见<![endif]—>
+<!--[if !IE 8]>非IE8的IE可见<![endif]-->
+```
