@@ -1,0 +1,5 @@
+* [必备应用](/apps/Applist)
+* [工具笔记](/apps/AppNotes)
+* [ChatGPT](/apps/ChatGPT)
+* [平面设计](/apps/design)
+* [Chrome 扩展](/apps/Chrome)
