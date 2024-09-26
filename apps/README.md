@@ -1,14 +1,14 @@
 # apps
 
-欢迎来到 🧰 应用手册！
+欢迎来到 apps！
 
 ## 文件列表
 
-- [Applist](apps/Applist)
-- [AppNotes](apps/AppNotes)
+- [必备应用](apps/Applist)
+- [工具笔记](apps/AppNotes)
 - [ChatGPT](apps/ChatGPT)
-- [Chrome](apps/Chrome)
-- [design](apps/design)
+- [Chrome 扩展](apps/Chrome)
+- [平面设计](apps/design)
 
 ## 子目录
 

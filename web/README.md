@@ -4,7 +4,7 @@
 
 ## 文件列表
 
-- [Comments](web/Comments)
+- [评论插件](web/Comments)
 - [docsify](web/docsify)
 - [VuePress](web/VuePress)
 
